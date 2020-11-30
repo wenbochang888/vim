@@ -21,7 +21,7 @@ let &t_ut=''
 set expandtab
 set list
 set listchars=tab:▸\ ,trail:▫
-set scrolloff=5
+set scrolloff=15
 set tw=0
 set indentexpr=
 set backspace=indent,eol,start
@@ -49,8 +49,6 @@ syntax on
 "大写S保存并退出
 map S :wq<CR>
 
-"空格对
-map ll %
 
 "行首，行尾
 map 1 <S-^>
@@ -73,6 +71,10 @@ noremap <LEADER>l <C-w>l
 noremap <LEADER>i <C-w>k
 noremap <LEADER>k <C-w>j
 
+"上下左右
+noremap j h
+noremap i k
+noremap k j
 
 "插件
 call plug#begin('~/.vim/plugged')
@@ -82,7 +84,6 @@ Plug 'vim-airline/vim-airline'
 
 " File navigation
 Plug 'preservim/nerdtree'
-
 
 call plug#end()
 
